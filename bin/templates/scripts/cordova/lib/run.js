@@ -48,8 +48,8 @@ module.exports.run = function (argv) {
 
     // validate target device for ios-sim
     // Valid values for "--target" (case sensitive):
-    var validTargets = ['iPhone-4s', 'iPhone-5', 'iPhone-5s', 'iPhone-6-Plus', 'iPhone-6',
-        'iPad-2', 'iPad-Retina', 'iPad-Air', 'Resizable-iPhone', 'Resizable-iPad'];
+    var validTargets = ['iPhone-4s', 'iPhone-5', 'iPhone-5s', 'iPhone-6-Plus', 'iPhone-6','iPhone-6s','iPhone-6s-Plus', 
+        'iPad-2', 'iPad-Retina', 'iPad-Air', 'Resizable-iPhone', 'Resizable-iPad','iPad-Air-2', 'iPad-Pro'];
     if (!(args.device) && args.target && validTargets.indexOf(args.target.split(',')[0]) < 0 ) {
         return Q.reject(args.target + ' is not a valid target for emulator');
     }
